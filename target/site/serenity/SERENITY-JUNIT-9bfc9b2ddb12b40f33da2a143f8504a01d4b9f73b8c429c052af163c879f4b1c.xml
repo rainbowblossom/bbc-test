@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="2" failures="3" name="Testing different request on the  BBC music tracks and metadata" skipped="0" tests="5" time="7.27" timestamp="2022-04-10T21:23:15.679+01:00[Europe/London]"><testcase name="Verify if the BBC application can be accessed by users"><failure message="1 expectation failed.&#10;Expected status code &lt;200&gt; but was &lt;403&gt;.&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;403&gt;.
+</failure><system-err>1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;403&gt;.
+&#13;
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:636)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:122)&#13;
+io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:130)&#13;
+io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:117)&#13;
+com.bbc.cucumber.stepsdefinitions.StepDefinitions.user_must_get_back_a_valid_status_code(StepDefinitions.java:33)&#13;
+✽.Then User must get back a valid status code(bbc.feature:5)&#13;
+</system-err></testcase><testcase name="Verify if the BBC application can be accessed by users"><error message="io.restassured.path.xml.XmlPath cannot be cast to java.util.List" type="java.lang.ClassCastException">io.restassured.path.xml.XmlPath cannot be cast to java.util.List</error><system-err>io.restassured.path.xml.XmlPath cannot be cast to java.util.List&#13;
+com.bbc.cucumber.stepsdefinitions.StepDefinitions.verifyThatTheFieldIsNeverNullForAllTheItemsPresentInTheList(StepDefinitions.java:44)&#13;
+✽.Then Verify that the "id" field is never null for all the items present in the list(bbc.feature:10)&#13;
+</system-err></testcase><testcase name="Verify if the BBC application can be accessed by users"><error message="io.restassured.path.xml.XmlPath cannot be cast to java.util.List" type="java.lang.ClassCastException">io.restassured.path.xml.XmlPath cannot be cast to java.util.List</error><system-err>io.restassured.path.xml.XmlPath cannot be cast to java.util.List&#13;
+com.bbc.cucumber.stepsdefinitions.StepDefinitions.verifyThatTheFieldInTheIsNeverEmptyForAnyTrack(StepDefinitions.java:62)&#13;
+✽.Then Verify that the "primary" field in the "title_list" is never empty for any track(bbc.feature:15)&#13;
+</system-err></testcase><testcase name="Verify if the BBC application can be accessed by users"><failure message="1 expectation failed.&#10;XML path data.offset.now_playing doesn't match.&#10;Expected: a collection containing &lt;true&gt;&#10;  Actual: &#10;" type="java.lang.AssertionError">1 expectation failed.
+XML path data.offset.now_playing doesn't match.
+Expected: a collection containing &lt;true&gt;
+  Actual: 
+</failure><system-err>1 expectation failed.
+XML path data.offset.now_playing doesn't match.
+Expected: a collection containing &lt;true&gt;
+  Actual: 
+&#13;
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:636)&#13;
+io.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:265)&#13;
+io.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:248)&#13;
+io.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:268)&#13;
+com.bbc.cucumber.stepsdefinitions.StepDefinitions.verifyThatOnlyOneTrackInTheListHasFieldInAsTrue(StepDefinitions.java:70)&#13;
+✽.Then Verify that only one track in the list has "now_playing" field in "offset" as true(bbc.feature:19)&#13;
+</system-err></testcase><testcase name="Verify if the BBC application can be accessed by users"><failure message="1 expectation failed.&#10;Expected header &quot;date&quot; was not &quot;Date&quot;, was &quot;Sun, 10 Apr 2022 20:23:24 GMT&quot;. Headers are:&#10;Server=nginx/1.18.0 (Ubuntu)&#10;Content-Type=text/html; charset=UTF-8&#10;Transfer-Encoding=chunked&#10;Connection=keep-alive&#10;Cache-Control=no-cache, private&#10;Date=Sun, 10 Apr 2022 20:23:24 GMT&#10;X-RateLimit-Limit=60&#10;X-RateLimit-Remaining=55&#10;Content-Encoding=gzip&#10;" type="java.lang.AssertionError">1 expectation failed.
+Expected header "date" was not "Date", was "Sun, 10 Apr 2022 20:23:24 GMT". Headers are:
+Server=nginx/1.18.0 (Ubuntu)
+Content-Type=text/html; charset=UTF-8
+Transfer-Encoding=chunked
+Connection=keep-alive
+Cache-Control=no-cache, private
+Date=Sun, 10 Apr 2022 20:23:24 GMT
+X-RateLimit-Limit=60
+X-RateLimit-Remaining=55
+Content-Encoding=gzip
+</failure><system-err>1 expectation failed.
+Expected header "date" was not "Date", was "Sun, 10 Apr 2022 20:23:24 GMT". Headers are:
+Server=nginx/1.18.0 (Ubuntu)
+Content-Type=text/html; charset=UTF-8
+Transfer-Encoding=chunked
+Connection=keep-alive
+Cache-Control=no-cache, private
+Date=Sun, 10 Apr 2022 20:23:24 GMT
+X-RateLimit-Limit=60
+X-RateLimit-Remaining=55
+Content-Encoding=gzip
+&#13;
+io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:636)&#13;
+io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:177)&#13;
+io.restassured.internal.ResponseSpecificationImpl.header(ResponseSpecificationImpl.groovy:184)&#13;
+io.restassured.internal.ValidatableResponseOptionsImpl.header(ValidatableResponseOptionsImpl.java:152)&#13;
+com.bbc.cucumber.stepsdefinitions.StepDefinitions.verifyTheValueInTheResponseHeaders(StepDefinitions.java:75)&#13;
+✽.Then Verify the "Date" value in the response headers(bbc.feature:23)&#13;
+</system-err></testcase></testsuite>
